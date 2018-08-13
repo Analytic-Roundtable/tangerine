@@ -3,6 +3,9 @@
      xml:base="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:sumo="http://www.ontologyportal.org/SUMO.owl#"
+     xmlns:AE="http://www.mitre.org/analysisexchange/AE.owl#"
+     xmlns:PMESIIPT="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#"
      xmlns:OEEventOntology="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEEventOntology#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
@@ -12,7 +15,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology">
-        <owl:imports rdf:resource="http://www.semanticweb.org/rwinder/ontologies/2018/6/AnalysisExchange_OE_USAF_Merged"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/rwinder/ontologies/2018/7/AnalysisExchange_OE_USAF_Merged"/>
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DISTRIBUTION A: Approved for public release; distribution is unlimited.  For more information contact United States Army TRADOC G-27 at usarmy.jble.tradoc.list.tboc-operations@mail.mil (or Kaye Darone, Data Science Branch Chief, DSMS, Kaye.t.darone.civ@mail.mil, (757) 878-9547)</owl:versionInfo>
     </owl:Ontology>
     
@@ -661,7 +664,7 @@
     <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#PMESII-PT -->
 
     <owl:Class rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#PMESII-PT">
-        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+        <rdfs:subClassOf rdf:resource="http://www.mitre.org/analysisexchange/AE.owl#DescriptiveInformationContentEntity"/>
         <CommonCoreOntologies:alternative_label>PMESII_PT</CommonCoreOntologies:alternative_label>
         <CommonCoreOntologies:definition>Commanders and staffs use the operational and mission Categorys to help build their situational understanding. They analyze and describe an operational environment in terms of eight interrelated operational Categorys: political, military, economic, social, information, infrastructure, physical environment, and time</CommonCoreOntologies:definition>
     </owl:Class>
@@ -1118,12 +1121,6 @@
     
 
 
-    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity -->
-
-    <owl:Class rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1135,11 +1132,29 @@
     
 
 
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Amari -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Amari">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Amari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Ariana -->
 
     <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Ariana">
         <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
         <rdfs:label>Ariana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Arnland -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Arnland">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Arnland</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1153,11 +1168,47 @@
     
 
 
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Belesia -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Belesia">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Belesia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Bothnia -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Bothnia">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Bothnia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Donovia -->
 
     <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Donovia">
         <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
         <rdfs:label>Donovia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Framland -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Framland">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Framland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Gabal -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Gabal">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Gabal</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1171,6 +1222,15 @@
     
 
 
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Kujenga -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Kujenga">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Kujenga</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Limaria -->
 
     <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Limaria">
@@ -1180,11 +1240,83 @@
     
 
 
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Lindsey -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Lindsey">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Lindsey</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#North_Torbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#North_Torbia">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>North Torbia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Nyumba -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Nyumba">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Nyumba</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Olvana -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Olvana">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Olvana</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Otso -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Otso">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Otso</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Pirtuni -->
 
     <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Pirtuni">
         <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
         <rdfs:label>Pirtuni</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#South_Torbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#South_Torbia">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>South Torbia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Torrike -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Torrike">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Torrike</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Ziwa -->
+
+    <owl:NamedIndividual rdf:about="http://www.ontologylibrary.mil/OperationalEnvironment/Mid/OEPMESIIPTOntology#Ziwa">
+        <rdf:type rdf:resource="http://www.ontologyportal.org/SUMO.owl#Nation"/>
+        <rdfs:label>Ziwa</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>
 
