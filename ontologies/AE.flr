@@ -73,7 +73,7 @@ AE#NoChangeOfTerritoryBattle :: sumo#Battle.
 AE#Nominating :: sumo#OrganizationalProcess.
 AE#NuclearSubstance :: sumo#Substance.
 AE#OrganizationMember :: sumo#Human.
-AE#OrganizationMember ObjectSomeValuesFrom(AE#isAffiliatedWith :: sumo#Organization).
+// SubClassOf(AE:OrganizationMember ObjectSomeValuesFrom(AE:isAffiliatedWith sumo:Organization))
 AE#Ousting :: sumo#PoliticalProcess.
 AE#OvertakeTerritoryBattle :: sumo#Battle.
 AE#PassportNumber :: sumo#Identifier.
@@ -126,26 +126,26 @@ AE#WeaponImpacting :: sumo#Impacting.
 OEArmyHierarchyOntology#Air_Defense_Artillery_Battery :: OEArmyHierarchyOntology#Army_Battery.
 OEArmyHierarchyOntology#Army_Air_and_Missle_Defense_Brigade :: OEArmyHierarchyOntology#Army_Functional_Brigade.
 OEArmyHierarchyOntology#Army_Battalion :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Battalion ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Company).
+// SubClassOf(OEArmyHierarchyOntology:Army_Battalion ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Company))
 OEArmyHierarchyOntology#Army_Battalion_Task_Force :: OEArmyHierarchyOntology#Army_Battalion.
 OEArmyHierarchyOntology#Army_Battery :: OEArmyHierarchyOntology#Army_Company.
 OEArmyHierarchyOntology#Army_Battlefield_Surveillance_Brigade :: OEArmyHierarchyOntology#Army_Multifunctional_Support_Brigade.
 OEArmyHierarchyOntology#Army_Brigade :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Brigade ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Battalion).
+// SubClassOf(OEArmyHierarchyOntology:Army_Brigade ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Battalion))
 OEArmyHierarchyOntology#Army_Brigade_Combat_Team :: OEArmyHierarchyOntology#Army_Brigade.
-OEArmyHierarchyOntology#Army_Brigade_Combat_Team ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Maneuver_Battalion).
+// SubClassOf(OEArmyHierarchyOntology:Army_Brigade_Combat_Team ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Maneuver_Battalion))
 OEArmyHierarchyOntology#Army_Civil_Affairs_Brigade :: OEArmyHierarchyOntology#Army_Functional_Brigade.
 OEArmyHierarchyOntology#Army_Combat_Aviation_Brigade :: OEArmyHierarchyOntology#Army_Multifunctional_Support_Brigade.
 OEArmyHierarchyOntology#Army_Combat_Engineer_Company :: OEArmyHierarchyOntology#Army_Company.
 OEArmyHierarchyOntology#Army_Company :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Company ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Platoon).
+// SubClassOf(OEArmyHierarchyOntology:Army_Company ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Platoon))
 OEArmyHierarchyOntology#Army_Company_Team :: OEArmyHierarchyOntology#Army_Company.
 OEArmyHierarchyOntology#Army_Corps :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Corps ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Division).
+// SubClassOf(OEArmyHierarchyOntology:Army_Corps ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Division))
 OEArmyHierarchyOntology#Army_Crew :: sumo#MilitaryForce.
 OEArmyHierarchyOntology#Army_Detachment :: OEArmyHierarchyOntology#Army_Company.
 OEArmyHierarchyOntology#Army_Division :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Division ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Brigade).
+// SubClassOf(OEArmyHierarchyOntology:Army_Division ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Brigade))
 OEArmyHierarchyOntology#Army_Engineer_Brigade :: OEArmyHierarchyOntology#Army_Functional_Brigade.
 OEArmyHierarchyOntology#Army_Fire_Battery :: OEArmyHierarchyOntology#Army_Battery.
 OEArmyHierarchyOntology#Army_Fire_Platoon :: OEArmyHierarchyOntology#Army_Platoon.
@@ -159,15 +159,15 @@ OEArmyHierarchyOntology#Army_Maneuver_Enhancement_Brigade :: OEArmyHierarchyOnto
 OEArmyHierarchyOntology#Army_Military_Police_Brigade :: OEArmyHierarchyOntology#Army_Functional_Brigade.
 OEArmyHierarchyOntology#Army_Multifunctional_Support_Brigade :: OEArmyHierarchyOntology#Army_Brigade.
 OEArmyHierarchyOntology#Army_Platoon :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Platoon ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Section).
-OEArmyHierarchyOntology#Army_Platoon ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Squad).
+// SubClassOf(OEArmyHierarchyOntology:Army_Platoon ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Section))
+// SubClassOf(OEArmyHierarchyOntology:Army_Platoon ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Squad))
 OEArmyHierarchyOntology#Army_Regiment :: sumo#MilitaryForce.
 OEArmyHierarchyOntology#Army_Section :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Section ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Fire_Team).
-OEArmyHierarchyOntology#Army_Section ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Squad).
+// SubClassOf(OEArmyHierarchyOntology:Army_Section ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Fire_Team))
+// SubClassOf(OEArmyHierarchyOntology:Army_Section ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Squad))
 OEArmyHierarchyOntology#Army_Squad :: sumo#MilitaryForce.
-OEArmyHierarchyOntology#Army_Squad ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Crew).
-OEArmyHierarchyOntology#Army_Squad ObjectSomeValuesFrom(ro#has_part :: OEArmyHierarchyOntology#Army_Fire_Team).
+// SubClassOf(OEArmyHierarchyOntology:Army_Squad ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Crew))
+// SubClassOf(OEArmyHierarchyOntology:Army_Squad ObjectSomeValuesFrom(ro:has_part OEArmyHierarchyOntology:Army_Fire_Team))
 OEArmyHierarchyOntology#Army_Sustainment_Brigade :: OEArmyHierarchyOntology#Army_Multifunctional_Support_Brigade.
 OEArmyHierarchyOntology#Army_Troop :: OEArmyHierarchyOntology#Army_Company.
 OEEthnicityOntology#Aborigine :: AE#EthnicGroup.
@@ -449,7 +449,7 @@ OEEthnicityOntology#Yemeni_Arab :: OEEthnicityOntology#Arab.
 OEEthnicityOntology#Yoruba :: AE#EthnicGroup.
 OEEthnicityOntology#Zapoteco :: AE#EthnicGroup.
 OEEthnicityOntology#Zhuang :: AE#EthnicGroup.
-OEEthnicityOntology#,Saami :: OEEthnicityOntology#Finno-Ugric.
+OEEthnicityOntology#Saami :: OEEthnicityOntology#Finno-Ugric.
 OEEthnicityOntology#Albanian_(Ethnic_Group) :: AE#EthnicGroup.
 OEEthnicityOntology#Croat_(Ethnic_Group) :: AE#EthnicGroup.
 OEEthnicityOntology#Kurd_(Ethnic_Group) :: AE#EthnicGroup.
@@ -1061,7 +1061,7 @@ OEIdeologyOntology#EconomicIdeology :: AE#Ideology.
 OEIdeologyOntology#Far_Left :: CommonCoreOntologies#PoliticalOrientation.
 OEIdeologyOntology#Far_Right :: CommonCoreOntologies#PoliticalOrientation.
 OEIdeologyOntology#FastingDirective :: OEIdeologyOntology#PillarOfIslam.
-OEIdeologyOntology#FastingDirective ObjectSomeValuesFrom(CommonCoreOntologies#prescribes :: OEIdeologyOntology#ActOfFasting).
+// SubClassOf(OEIdeologyOntology:FastingDirective ObjectSomeValuesFrom(CommonCoreOntologies:prescribes OEIdeologyOntology:ActOfFasting))
 OEIdeologyOntology#FinalJudgementIdeology :: OEIdeologyOntology#ReligiousIdeology.
 OEIdeologyOntology#ForgivenessIdeology :: OEIdeologyOntology#ChristianReligiousDirective.
 OEIdeologyOntology#Fundamentalist :: CommonCoreOntologies#PoliticalOrientation.
@@ -1069,11 +1069,11 @@ OEIdeologyOntology#IslamicIdeology :: OEIdeologyOntology#ReligiousIdeology.
 OEIdeologyOntology#IslamicReligiousDirective :: OEIdeologyOntology#ReligiousDirective.
 OEIdeologyOntology#Libertarian :: CommonCoreOntologies#PoliticalOrientation.
 OEIdeologyOntology#Muslim :: OEIdeologyOntology#ReligiousOrganizationMember.
-OEIdeologyOntology#Muslim ObjectSomeValuesFrom(ro#part_of :: OEIdeologyOntology#Ummah).
-OEIdeologyOntology#Muslim ObjectSomeValuesFrom(ro#participates_in :: OEIdeologyOntology#ActOfDeclarationOfFaith).
-OEIdeologyOntology#Muslim ObjectSomeValuesFrom(ro#participates_in :: OEIdeologyOntology#ActOfFasting).
-OEIdeologyOntology#Muslim ObjectSomeValuesFrom(ro#participates_in :: OEIdeologyOntology#ActOfPilgrimage).
-OEIdeologyOntology#Muslim ObjectSomeValuesFrom(ro#participates_in :: OEIdeologyOntology#ActOfPrayer).
+// SubClassOf(OEIdeologyOntology:Muslim ObjectSomeValuesFrom(ro:part_of OEIdeologyOntology:Ummah))
+// SubClassOf(OEIdeologyOntology:Muslim ObjectSomeValuesFrom(ro:participates_in OEIdeologyOntology:ActOfDeclarationOfFaith))
+// SubClassOf(OEIdeologyOntology:Muslim ObjectSomeValuesFrom(ro:participates_in OEIdeologyOntology:ActOfFasting))
+// SubClassOf(OEIdeologyOntology:Muslim ObjectSomeValuesFrom(ro:participates_in OEIdeologyOntology:ActOfPilgrimage))
+// SubClassOf(OEIdeologyOntology:Muslim ObjectSomeValuesFrom(ro:participates_in OEIdeologyOntology:ActOfPrayer))
 OEIdeologyOntology#Nationalist :: CommonCoreOntologies#PoliticalOrientation.
 OEIdeologyOntology#ObligatoryPrayer :: OEIdeologyOntology#PillarOfIslam.
 OEIdeologyOntology#OmnipotenceOfGodIdeology :: OEIdeologyOntology#ReligiousIdeology.
@@ -1083,11 +1083,11 @@ OEIdeologyOntology#ReligiousDirective :: AE#DirectiveInformationContentEntity.
 OEIdeologyOntology#ReligiousIdeology :: AE#Ideology.
 OEIdeologyOntology#ReligiousOrganizationMember :: AE#OrganizationMember.
 OEIdeologyOntology#SalafiJihadIdeology :: OEIdeologyOntology#IslamicReligiousDirective.
-OEIdeologyOntology#SalafiJihadIdeology ObjectSomeValuesFrom(CommonCoreOntologies#prescribes :: OEIdeologyOntology#ActOfJihad).
+// SubClassOf(OEIdeologyOntology:SalafiJihadIdeology ObjectSomeValuesFrom(CommonCoreOntologies:prescribes OEIdeologyOntology:ActOfJihad))
 OEIdeologyOntology#SalafistMuslim :: OEIdeologyOntology#Muslim.
-OEIdeologyOntology#SalafistMuslim ObjectSomeValuesFrom(ro#participates_in :: OEIdeologyOntology#ActOfJihad).
-OEIdeologyOntology#SalafistMuslim ObjectSomeValuesFrom(OEIdeologyOntology#has_belief :: OEIdeologyOntology#PillarOfIslam).
-OEIdeologyOntology#SalafistMuslim ObjectSomeValuesFrom(OEIdeologyOntology#has_belief :: OEIdeologyOntology#SalafiJihadIdeology).
+// SubClassOf(OEIdeologyOntology:SalafistMuslim ObjectSomeValuesFrom(ro:participates_in OEIdeologyOntology:ActOfJihad))
+// SubClassOf(OEIdeologyOntology:SalafistMuslim ObjectSomeValuesFrom(OEIdeologyOntology:has_belief OEIdeologyOntology:PillarOfIslam))
+// SubClassOf(OEIdeologyOntology:SalafistMuslim ObjectSomeValuesFrom(OEIdeologyOntology:has_belief OEIdeologyOntology:SalafiJihadIdeology))
 OEIdeologyOntology#Secular :: CommonCoreOntologies#PoliticalOrientation.
 OEIdeologyOntology#SinfulnessOfManIdeology :: OEIdeologyOntology#ReligiousIdeology.
 OEIdeologyOntology#SocialIdeology :: AE#Ideology.
@@ -1114,7 +1114,7 @@ OEOrganizationOntology#PoliticalOpposition :: sumo#Organization.
 OEOrganizationOntology#Rebels :: sumo#Organization.
 OEOrganizationOntology#Refugees :: sumo#Organization.
 OEOrganizationOntology#Religious :: sumo#Organization.
-OEOrganizationOntology#Religious ObjectSomeValuesFrom(CommonCoreOntologies#aggregate_has_quality :: AE#EthnicGroup).
+// SubClassOf(OEOrganizationOntology:Religious ObjectSomeValuesFrom(CommonCoreOntologies:aggregate_has_quality AE:EthnicGroup))
 OEOrganizationOntology#Separatist :: OEOrganizationOntology#Rebels.
 OEOrganizationOntology#Spy :: sumo#Organization.
 OEOrganizationOntology#UnalignedArmedForces :: AE#ArmedForce.
@@ -1145,7 +1145,7 @@ OEReligionOntology#IslamicReligiousOrganization :: OEReligionOntology#ReligiousO
 OEReligionOntology#Jain :: OEReligionOntology#Religion.
 OEReligionOntology#Jew :: OEReligionOntology#Religion.
 OEReligionOntology#JihadistIdeology :: OEReligionOntology#ReligiousDirectiveInformationContentEntity.
-OEReligionOntology#JihadistIdeology ObjectSomeValuesFrom(CommonCoreOntologies#is_cause_of :: OEReligionOntology#ActOfJihad).
+// SubClassOf(OEReligionOntology:JihadistIdeology ObjectSomeValuesFrom(CommonCoreOntologies:is_cause_of OEReligionOntology:ActOfJihad))
 OEReligionOntology#Latter_Day_Saints :: OEReligionOntology#Christian.
 OEReligionOntology#Maronite :: OEReligionOntology#Christian.
 OEReligionOntology#Muslim :: OEReligionOntology#Religion.
@@ -1163,7 +1163,7 @@ OEReligionOntology#ReligiousOrganizationMember :: AE#OrganizationMember.
 OEReligionOntology#ReligousMovement :: AE#AggregateProcess.
 OEReligionOntology#SalafistOrganization :: OEReligionOntology#IslamicReligiousOrganization.
 OEReligionOntology#SalafistOrganizationMember :: OEReligionOntology#IslamicOrganizationMember.
-OEReligionOntology#SalafistOrganizationMember ObjectSomeValuesFrom(OEReligionOntology#member_of :: OEReligionOntology#SalafistOrganization).
+// SubClassOf(OEReligionOntology:SalafistOrganizationMember ObjectSomeValuesFrom(OEReligionOntology:member_of OEReligionOntology:SalafistOrganization))
 OEReligionOntology#Sikh :: OEReligionOntology#Religion.
 OEReligionOntology#Sufi :: OEReligionOntology#Muslim.
 OEReligionOntology#Sunni :: OEReligionOntology#Muslim.
@@ -1283,7 +1283,6 @@ sumo#MediaOrganization :: sumo#Organization.
 sumo#Meeting :: sumo#SocialInteraction.
 sumo#MilitaryForce :: sumo#PoliticalOrganization.
 sumo#MilitaryOrganization :: sumo#GovernmentOrganization.
-sumo#Missle :: sumo#Projectile.
 sumo#Motion :: sumo#IntentionalProcess.
 sumo#Name :: sumo#Descriptor.
 sumo#Nation :: sumo#GeopoliticalArea.
@@ -1369,7 +1368,7 @@ sumo#Wedding :: sumo#Ceremony.
 sumo#Withdrawal :: sumo#FinancialTransaction.
 CommonCoreOntologies#AcademicDegree :: CommonCoreOntologies#Certificate.
 CommonCoreOntologies#Acceleration :: EventOntology#ProcessProfile.
-CommonCoreOntologies#Acceleration ObjectSomeValuesFrom(CommonCoreOntologies#has_process_part :: CommonCoreOntologies#Velocity).
+// SubClassOf(CommonCoreOntologies:Acceleration ObjectSomeValuesFrom(CommonCoreOntologies:has_process_part CommonCoreOntologies:Velocity))
 CommonCoreOntologies#Act :: sumo#Process.
 CommonCoreOntologies#ActOfAdvising :: CommonCoreOntologies#ActOfDirectiveCommunication.
 CommonCoreOntologies#ActOfApologizing :: CommonCoreOntologies#ActOfExpressiveCommunication.
@@ -1418,7 +1417,7 @@ CommonCoreOntologies#ActOfFinancialWithdrawal :: CommonCoreOntologies#ActOfFinan
 CommonCoreOntologies#ActOfFunding :: CommonCoreOntologies#ActOfFinancialInstrumentUse.
 CommonCoreOntologies#ActOfGovernment :: CommonCoreOntologies#IntentionalAct.
 CommonCoreOntologies#ActOfHomicide :: CommonCoreOntologies#ActOfViolence.
-CommonCoreOntologies#ActOfHomicide ObjectSomeValuesFrom(CommonCoreOntologies#is_cause_of :: CommonCoreOntologies#Death).
+// SubClassOf(CommonCoreOntologies:ActOfHomicide ObjectSomeValuesFrom(CommonCoreOntologies:is_cause_of CommonCoreOntologies:Death))
 CommonCoreOntologies#ActOfIdentifying :: CommonCoreOntologies#ActOfRepresentativeCommunication.
 CommonCoreOntologies#ActOfInhabitancy :: CommonCoreOntologies#IntentionalAct.
 CommonCoreOntologies#ActOfIntelligenceGathering :: CommonCoreOntologies#IntentionalAct.
@@ -1471,7 +1470,7 @@ CommonCoreOntologies#ActOfSocialGroupMembership :: CommonCoreOntologies#ActOfAss
 CommonCoreOntologies#ActOfSocialMovement :: CommonCoreOntologies#SocialAct.
 CommonCoreOntologies#ActOfSojourn :: CommonCoreOntologies#ActOfInhabitancy.
 CommonCoreOntologies#ActOfSuicide :: CommonCoreOntologies#ActOfViolence.
-CommonCoreOntologies#ActOfSuicide ObjectSomeValuesFrom(CommonCoreOntologies#is_cause_of :: CommonCoreOntologies#Death).
+// SubClassOf(CommonCoreOntologies:ActOfSuicide ObjectSomeValuesFrom(CommonCoreOntologies:is_cause_of CommonCoreOntologies:Death))
 CommonCoreOntologies#ActOfTerrorism :: CommonCoreOntologies#IntentionalAct.
 CommonCoreOntologies#ActOfTerroristTrainingAcquisition :: CommonCoreOntologies#ActOfTrainingAcquisition.
 CommonCoreOntologies#ActOfTerroristTrainingInstruction :: CommonCoreOntologies#ActOfTrainingInstruction.
@@ -1523,14 +1522,14 @@ CommonCoreOntologies#ArmedForce :: CommonCoreOntologies#Organization.
 CommonCoreOntologies#ArmoredPersonnelCarrier :: CommonCoreOntologies#GroundMotorVehicle.
 CommonCoreOntologies#Arrow :: CommonCoreOntologies#PortionOfAmmunition.
 CommonCoreOntologies#ArticleOfClothing :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#ArticleOfClothing ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#CoveringArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ArticleOfClothing ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:CoveringArtifactFunction))
 CommonCoreOntologies#ArticleOfSolidWaste :: CommonCoreOntologies#PortionOfWasteMaterial.
 CommonCoreOntologies#Artifact :: sumo#Object.
 CommonCoreOntologies#ArtifactDesignContentEntity :: AE#DirectiveInformationContentEntity.
-CommonCoreOntologies#ArtifactDesignContentEntity ObjectSomeValuesFrom(CommonCoreOntologies#prescribes :: CommonCoreOntologies#Artifact).
+// SubClassOf(CommonCoreOntologies:ArtifactDesignContentEntity ObjectSomeValuesFrom(CommonCoreOntologies:prescribes CommonCoreOntologies:Artifact))
 CommonCoreOntologies#ArtifactDimensionSpecification :: CommonCoreOntologies#QualitySpecification.
 CommonCoreOntologies#ArtifactFunction :: sumo#Process.
-CommonCoreOntologies#ArtifactFunction ObjectSomeValuesFrom(CommonCoreOntologies#inheres_in :: CommonCoreOntologies#Artifact).
+// SubClassOf(CommonCoreOntologies:ArtifactFunction ObjectSomeValuesFrom(CommonCoreOntologies:inheres_in CommonCoreOntologies:Artifact))
 CommonCoreOntologies#ArtifactFunctionSpecification :: AE#DirectiveInformationContentEntity.
 CommonCoreOntologies#ArtifactHistory :: ArtifactOntology#History.
 CommonCoreOntologies#ArtifactIdentifier :: AE#DesignativeInformationContentEntity.
@@ -1546,7 +1545,7 @@ CommonCoreOntologies#AutopilotSystem :: CommonCoreOntologies#VehicleControlSyste
 CommonCoreOntologies#AxialRotationPeriod :: sumo#TimePoint.
 CommonCoreOntologies#BaseOfOperations :: CommonCoreOntologies#MilitaryBase.
 CommonCoreOntologies#BatteryTerminal :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#BatteryTerminal ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ElectricalContactArtifactFunction).
+// SubClassOf(CommonCoreOntologies:BatteryTerminal ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectricalContactArtifactFunction))
 CommonCoreOntologies#BearingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#Behavior :: CommonCoreOntologies#Act.
 CommonCoreOntologies#Bent :: CommonCoreOntologies#ShapeQuality.
@@ -1569,7 +1568,7 @@ CommonCoreOntologies#Book :: CommonCoreOntologies#InformationBearingArtifact.
 CommonCoreOntologies#BoundingBoxPoint :: CommonCoreOntologies#GeospatialPosition.
 CommonCoreOntologies#Bow :: CommonCoreOntologies#ProjectileLauncher.
 CommonCoreOntologies#Brake :: CommonCoreOntologies#VehicleControlSystemComponent.
-CommonCoreOntologies#Brake ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#InhibitingMotionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Brake ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:InhibitingMotionArtifactFunction))
 CommonCoreOntologies#BrakeControlSystem :: CommonCoreOntologies#VehicleControlSystem.
 CommonCoreOntologies#Branched :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#Bridge :: CommonCoreOntologies#TransportationInfrastructure.
@@ -1578,7 +1577,7 @@ CommonCoreOntologies#Bullet :: CommonCoreOntologies#PortionOfAmmunition.
 CommonCoreOntologies#Bus :: CommonCoreOntologies#GroundMotorVehicle.
 CommonCoreOntologies#CabinPressurizationControlSystem :: CommonCoreOntologies#EnvironmentControlSystem.
 CommonCoreOntologies#Camera :: CommonCoreOntologies#ImagingInstrument.
-CommonCoreOntologies#Camera ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ImagingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Camera ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ImagingArtifactFunction))
 CommonCoreOntologies#Canal :: CommonCoreOntologies#TransportationInfrastructure.
 CommonCoreOntologies#Cannon :: CommonCoreOntologies#ProjectileLauncher.
 CommonCoreOntologies#CapacitanceArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
@@ -1586,8 +1585,8 @@ CommonCoreOntologies#CargoCabin :: sumo#Region.
 CommonCoreOntologies#CarrierAirWing :: CommonCoreOntologies#MilitaryPersonnelForce.
 CommonCoreOntologies#Cartridge :: CommonCoreOntologies#PortionOfAmmunition.
 CommonCoreOntologies#CatadioptricOpticalTelescope :: CommonCoreOntologies#OpticalTelescope.
-CommonCoreOntologies#CatadioptricOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ReflectionArtifactFunction).
-CommonCoreOntologies#CatadioptricOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RefractionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:CatadioptricOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ReflectionArtifactFunction))
+// SubClassOf(CommonCoreOntologies:CatadioptricOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RefractionArtifactFunction))
 CommonCoreOntologies#CatalystArtifactFunction :: CommonCoreOntologies#ChemicalReactionArtifactFunction.
 CommonCoreOntologies#CatalystArtifactFunctionSpecification :: CommonCoreOntologies#ChemicalReactionArtifactFunctionSpecification.
 CommonCoreOntologies#Cause :: sumo#Process.
@@ -1601,7 +1600,7 @@ CommonCoreOntologies#ChemicalReactionArtifactFunctionSpecification :: CommonCore
 CommonCoreOntologies#ChemicalWeapon :: CommonCoreOntologies#Weapon.
 CommonCoreOntologies#Church :: CommonCoreOntologies#ReligiousFacility.
 CommonCoreOntologies#CircuitBreaker :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#CircuitBreaker ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#SwitchArtifactFunction).
+// SubClassOf(CommonCoreOntologies:CircuitBreaker ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:SwitchArtifactFunction))
 CommonCoreOntologies#Circumference :: CommonCoreOntologies#Perimeter.
 CommonCoreOntologies#Citizen :: CommonCoreOntologies#Person.
 CommonCoreOntologies#CitizenRole :: sumo#SocialRole.
@@ -1626,15 +1625,15 @@ CommonCoreOntologies#CommercialRole :: sumo#SocialRole.
 CommonCoreOntologies#CommunicationArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#CommunicationArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
 CommonCoreOntologies#CommunicationInstrument :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#CommunicationInstrument ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#CommunicationArtifactFunction).
+// SubClassOf(CommonCoreOntologies:CommunicationInstrument ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:CommunicationArtifactFunction))
 CommonCoreOntologies#CommunicationInterferenceArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#CommunicationReceptionArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#CommunicationRelayArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
-CommonCoreOntologies#CommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#CommunicationArtifactFunction).
-CommonCoreOntologies#CommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#CommunicationReceptionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:CommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:CommunicationArtifactFunction))
+// SubClassOf(CommonCoreOntologies:CommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:CommunicationReceptionArtifactFunction))
 CommonCoreOntologies#CommunicationSystem :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#CommunicationsFacility :: CommonCoreOntologies#Facility.
-CommonCoreOntologies#CommunicationsFacility ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of ObjectUnionOf(CommonCoreOntologies#CommunicationArtifactFunction :: CommonCoreOntologies#CommunicationReceptionArtifactFunction)).
+// SubClassOf(CommonCoreOntologies:CommunicationsFacility ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of ObjectUnionOf(CommonCoreOntologies:CommunicationArtifactFunction CommonCoreOntologies:CommunicationReceptionArtifactFunction)))
 CommonCoreOntologies#Computer :: CommonCoreOntologies#InformationProcessingArtifact.
 CommonCoreOntologies#ComputerNetwork :: CommonCoreOntologies#TelecommunicationNetwork.
 CommonCoreOntologies#ComputingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
@@ -1643,13 +1642,13 @@ CommonCoreOntologies#ConductanceArtifactFunction :: CommonCoreOntologies#Artifac
 CommonCoreOntologies#ConeShape :: CommonCoreOntologies#ThreeDimensionalShape.
 CommonCoreOntologies#ConstructedFeature :: CommonCoreOntologies#AnthropogenicFeature.
 CommonCoreOntologies#Container :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#Container ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ContainingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Container ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ContainingArtifactFunction))
 CommonCoreOntologies#ContainingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#ContainingArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
 CommonCoreOntologies#Continent :: CommonCoreOntologies#GeospatialRegion.
 CommonCoreOntologies#ContractorRole :: sumo#SocialRole.
 CommonCoreOntologies#ControlSurface :: CommonCoreOntologies#VehicleControlSystemComponent.
-CommonCoreOntologies#ControlSurface ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#OrientationControlArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ControlSurface ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:OrientationControlArtifactFunction))
 CommonCoreOntologies#ControlledAccessHighway :: CommonCoreOntologies#Highway.
 CommonCoreOntologies#ConvexShape :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#ConveyanceArtifactFunction :: CommonCoreOntologies#MotionArtifactFunction.
@@ -1657,7 +1656,7 @@ CommonCoreOntologies#ConveyanceArtifactFunctionSpecification :: CommonCoreOntolo
 CommonCoreOntologies#CoolingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#CoolingArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
 CommonCoreOntologies#CoolingSystem :: CommonCoreOntologies#EnvironmentControlSystem.
-CommonCoreOntologies#CoolingSystem ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#CoolingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:CoolingSystem ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:CoolingArtifactFunction))
 CommonCoreOntologies#CounterfeitFinancialInstrument :: CommonCoreOntologies#CounterfeitInstrument.
 CommonCoreOntologies#CounterfeitInstrument :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#CounterfeitLegalInstrument :: CommonCoreOntologies#CounterfeitInstrument.
@@ -1687,7 +1686,7 @@ CommonCoreOntologies#DamagingArtifactFunction :: CommonCoreOntologies#ArtifactFu
 CommonCoreOntologies#DamagingArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
 CommonCoreOntologies#Database :: CommonCoreOntologies#InformationBearingArtifact.
 CommonCoreOntologies#Day :: sumo#TimePoint.
-CommonCoreOntologies#Day ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Week).
+// SubClassOf(CommonCoreOntologies:Day ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Week))
 CommonCoreOntologies#DeactivatedStasis :: CommonCoreOntologies#StasisOfArtifactOperationality.
 CommonCoreOntologies#Death :: CommonCoreOntologies#NaturalProcess.
 CommonCoreOntologies#Decade :: sumo#TimePoint.
@@ -1717,7 +1716,7 @@ CommonCoreOntologies#Diameter :: CommonCoreOntologies#OneDimensionalExtent.
 CommonCoreOntologies#DieselEngine :: CommonCoreOntologies#InternalCombustionEngine.
 CommonCoreOntologies#DiffractionArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#DiffractionGrating :: CommonCoreOntologies#OpticalInstrument.
-CommonCoreOntologies#DiffractionGrating ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#DiffractionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:DiffractionGrating ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:DiffractionArtifactFunction))
 CommonCoreOntologies#DigitalStorageDevice :: CommonCoreOntologies#InformationMediumArtifact.
 CommonCoreOntologies#DirectCurrentPowerSource :: CommonCoreOntologies#ElectricalPowerSource.
 CommonCoreOntologies#Disability :: AE#BiologicalAttribute.
@@ -1735,8 +1734,8 @@ CommonCoreOntologies#EducationalFacility :: CommonCoreOntologies#Facility.
 CommonCoreOntologies#EducationalOrganization :: CommonCoreOntologies#Organization.
 CommonCoreOntologies#Effect :: sumo#Process.
 CommonCoreOntologies#EffectOfLocationChange :: CommonCoreOntologies#Effect.
-CommonCoreOntologies#EffectOfLocationChange ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#ActOfLocationChange).
-CommonCoreOntologies#EffectOfLocationChange ObjectSomeValuesFrom(CommonCoreOntologies#caused_by :: CommonCoreOntologies#ActOfLocationChange).
+// SubClassOf(CommonCoreOntologies:EffectOfLocationChange ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:ActOfLocationChange))
+// SubClassOf(CommonCoreOntologies:EffectOfLocationChange ObjectSomeValuesFrom(CommonCoreOntologies:caused_by CommonCoreOntologies:ActOfLocationChange))
 CommonCoreOntologies#Election :: CommonCoreOntologies#SocialAct.
 CommonCoreOntologies#ElectricBattery :: CommonCoreOntologies#ElectricalPowerSource.
 CommonCoreOntologies#ElectricGenerator :: CommonCoreOntologies#ElectricalPowerSource.
@@ -1781,7 +1780,7 @@ CommonCoreOntologies#EquipmentCoolingSystem :: CommonCoreOntologies#CoolingSyste
 CommonCoreOntologies#EquipmentMount :: CommonCoreOntologies#MachineElement.
 CommonCoreOntologies#EssentialServiceProvision :: CommonCoreOntologies#ProcessAggregate.
 CommonCoreOntologies#EthnicGroup :: CommonCoreOntologies#GroupOfPersons.
-CommonCoreOntologies#EthnicGroup ObjectSomeValuesFrom(CommonCoreOntologies#aggregate_has_quality :: CommonCoreOntologies#Ethnicity).
+// SubClassOf(CommonCoreOntologies:EthnicGroup ObjectSomeValuesFrom(CommonCoreOntologies:aggregate_has_quality CommonCoreOntologies:Ethnicity))
 CommonCoreOntologies#Ethnicity :: AE#BiologicalAttribute.
 CommonCoreOntologies#Evening :: sumo#TimePoint.
 CommonCoreOntologies#ExplosiveArtifactFunction :: CommonCoreOntologies#DamagingArtifactFunction.
@@ -1794,7 +1793,7 @@ CommonCoreOntologies#ExtremelyHighFrequency :: CommonCoreOntologies#MicrowaveFre
 CommonCoreOntologies#ExtremelyLowFrequency :: CommonCoreOntologies#RadioFrequency.
 CommonCoreOntologies#Eye :: CommonCoreOntologies#BodilyComponent.
 CommonCoreOntologies#EyeColor :: AE#BiologicalAttribute.
-CommonCoreOntologies#EyeColor ObjectSomeValuesFrom(CommonCoreOntologies#inheres_in :: CommonCoreOntologies#Iris).
+// SubClassOf(CommonCoreOntologies:EyeColor ObjectSomeValuesFrom(CommonCoreOntologies:inheres_in CommonCoreOntologies:Iris))
 CommonCoreOntologies#FacialHair :: CommonCoreOntologies#BodilyComponent.
 CommonCoreOntologies#Facility :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#FacsimileTransmission :: CommonCoreOntologies#ActOfCommunicationByMedia.
@@ -1818,7 +1817,7 @@ CommonCoreOntologies#FinancialValueOfProperty :: AE#RelationalAttribute.
 CommonCoreOntologies#FireStation :: CommonCoreOntologies#PublicSafetyFacility.
 CommonCoreOntologies#Firearm :: CommonCoreOntologies#ProjectileLauncher.
 CommonCoreOntologies#FirstOrderAdministrativeRegion :: CommonCoreOntologies#GeopoliticalEntity.
-CommonCoreOntologies#FirstOrderAdministrativeRegion ObjectSomeValuesFrom(ro#proper_part_of :: CommonCoreOntologies#Country).
+// SubClassOf(CommonCoreOntologies:FirstOrderAdministrativeRegion ObjectSomeValuesFrom(ro:proper_part_of CommonCoreOntologies:Country))
 CommonCoreOntologies#FixedLineNetworkTelephoneCall :: CommonCoreOntologies#TelephoneCall.
 CommonCoreOntologies#Flat :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#FlightTransponder :: CommonCoreOntologies#RadioTransponder.
@@ -1832,7 +1831,7 @@ CommonCoreOntologies#Fort :: CommonCoreOntologies#MilitaryFacility.
 CommonCoreOntologies#ForwardOperationsBase :: CommonCoreOntologies#MilitaryBase.
 CommonCoreOntologies#FossilFuelPowerPlant :: CommonCoreOntologies#ElectricPowerStation.
 CommonCoreOntologies#FourthOrderAdministrativeRegion :: CommonCoreOntologies#GeopoliticalEntity.
-CommonCoreOntologies#FourthOrderAdministrativeRegion ObjectSomeValuesFrom(ro#proper_part_of :: CommonCoreOntologies#ThirdOrderAdministrativeRegion).
+// SubClassOf(CommonCoreOntologies:FourthOrderAdministrativeRegion ObjectSomeValuesFrom(ro:proper_part_of CommonCoreOntologies:ThirdOrderAdministrativeRegion))
 CommonCoreOntologies#FragmentationArtifactFunction :: CommonCoreOntologies#DamagingArtifactFunction.
 CommonCoreOntologies#FragranceArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#FragranceArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
@@ -1842,7 +1841,7 @@ CommonCoreOntologies#FrictionReductionArtifactFunction :: CommonCoreOntologies#A
 CommonCoreOntologies#FuelArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#FuelArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
 CommonCoreOntologies#FuelCell :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#FuelCell ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ElectricalPowerProductionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:FuelCell ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectricalPowerProductionArtifactFunction))
 CommonCoreOntologies#FuelSystem :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#FuelSystemComponent :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#FuelTank :: CommonCoreOntologies#Container.
@@ -1868,7 +1867,7 @@ CommonCoreOntologies#GasTurbine :: CommonCoreOntologies#InternalCombustionEngine
 CommonCoreOntologies#GasolineEngine :: CommonCoreOntologies#InternalCombustionEngine.
 CommonCoreOntologies#Gearbox :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#GeneratorControlUnit :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#GeneratorControlUnit ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#VoltageRegulatingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:GeneratorControlUnit ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:VoltageRegulatingArtifactFunction))
 CommonCoreOntologies#GeographicFeature :: CommonCoreOntologies#EnvironmentalFeature.
 CommonCoreOntologies#GeopoliticalEntity :: sumo#Agent.
 CommonCoreOntologies#GeopoliticalEntity :: sumo#GeographicArea.
@@ -1886,13 +1885,13 @@ CommonCoreOntologies#GeospatialPolygon :: CommonCoreOntologies#GeospatialLineStr
 CommonCoreOntologies#GeospatialPosition :: sumo#GeographicArea.
 CommonCoreOntologies#GeospatialRegion :: sumo#GeographicArea.
 CommonCoreOntologies#GeospatialRegionBoundingBox :: CommonCoreOntologies#GeospatialPolygon.
-CommonCoreOntologies#GeospatialRegionBoundingBox ObjectSomeValuesFrom(CommonCoreOntologies#has_nontangential_proper_part :: CommonCoreOntologies#GeospatialRegion).
+// SubClassOf(CommonCoreOntologies:GeospatialRegionBoundingBox ObjectSomeValuesFrom(CommonCoreOntologies:has_nontangential_proper_part CommonCoreOntologies:GeospatialRegion))
 CommonCoreOntologies#Gimbal :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#GoldColor :: CommonCoreOntologies#Color.
 CommonCoreOntologies#Government :: CommonCoreOntologies#Organization.
-CommonCoreOntologies#Government ObjectSomeValuesFrom(CommonCoreOntologies#is_delimited_by :: CommonCoreOntologies#GeopoliticalEntity).
+// SubClassOf(CommonCoreOntologies:Government ObjectSomeValuesFrom(CommonCoreOntologies:is_delimited_by CommonCoreOntologies:GeopoliticalEntity))
 CommonCoreOntologies#GovernmentAgency :: CommonCoreOntologies#Organization.
-CommonCoreOntologies#GovernmentAgency ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#Government).
+// SubClassOf(CommonCoreOntologies:GovernmentAgency ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:Government))
 CommonCoreOntologies#GovernmentArtifactFunction :: CommonCoreOntologies#ServiceArtifactFunction.
 CommonCoreOntologies#GovernmentArtifactFunctionSpecification :: CommonCoreOntologies#ServiceArtifactFunctionSpecification.
 CommonCoreOntologies#GovernmentBuilding :: CommonCoreOntologies#Facility.
@@ -1905,14 +1904,14 @@ CommonCoreOntologies#GroundMovingTargetIndicationArtifactFunction :: CommonCoreO
 CommonCoreOntologies#GroundTrack :: CommonCoreOntologies#VehicleTrack.
 CommonCoreOntologies#GroundVehicle :: CommonCoreOntologies#Vehicle.
 CommonCoreOntologies#GroupOfAgents :: sumo#Agent.
-CommonCoreOntologies#GroupOfAgents ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#Agent).
-CommonCoreOntologies#GroupOfAgents ObjectAllValuesFrom(ro#has_part :: CommonCoreOntologies#Agent).
+// SubClassOf(CommonCoreOntologies:GroupOfAgents ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:Agent))
+CommonCoreOntologies#GroupOfAgents[ro#has_part *=> CommonCoreOntologies#Agent].
 CommonCoreOntologies#GroupOfOrganizations :: CommonCoreOntologies#GroupOfAgents.
-CommonCoreOntologies#GroupOfOrganizations ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#Organization).
-CommonCoreOntologies#GroupOfOrganizations ObjectAllValuesFrom(ro#has_part :: CommonCoreOntologies#Organization).
+// SubClassOf(CommonCoreOntologies:GroupOfOrganizations ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:Organization))
+CommonCoreOntologies#GroupOfOrganizations[ro#has_part *=> CommonCoreOntologies#Organization].
 CommonCoreOntologies#GroupOfPersons :: CommonCoreOntologies#GroupOfAgents.
-CommonCoreOntologies#GroupOfPersons ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#Person).
-CommonCoreOntologies#GroupOfPersons ObjectAllValuesFrom(ro#has_part :: CommonCoreOntologies#Person).
+// SubClassOf(CommonCoreOntologies:GroupOfPersons ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:Person))
+CommonCoreOntologies#GroupOfPersons[ro#has_part *=> CommonCoreOntologies#Person].
 CommonCoreOntologies#HairColor :: AE#BiologicalAttribute.
 CommonCoreOntologies#HandGun :: CommonCoreOntologies#Firearm.
 CommonCoreOntologies#HardXrayFrequency :: CommonCoreOntologies#XrayFrequency.
@@ -1945,16 +1944,16 @@ CommonCoreOntologies#HospitalityArtifactFunctionSpecification :: CommonCoreOntol
 CommonCoreOntologies#Hostel :: CommonCoreOntologies#ResidentialFacility.
 CommonCoreOntologies#Hotel :: CommonCoreOntologies#ResidentialFacility.
 CommonCoreOntologies#Hour :: sumo#TimePoint.
-CommonCoreOntologies#Hour ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Day).
+// SubClassOf(CommonCoreOntologies:Hour ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Day))
 CommonCoreOntologies#House :: CommonCoreOntologies#ResidentialFacility.
 CommonCoreOntologies#Howitzer :: CommonCoreOntologies#Cannon.
 CommonCoreOntologies#HydraulicFluidReservoir :: CommonCoreOntologies#HydraulicPowerSourceComponent.
-CommonCoreOntologies#HydraulicFluidReservoir ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ContainingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:HydraulicFluidReservoir ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ContainingArtifactFunction))
 CommonCoreOntologies#HydraulicPowerSource :: CommonCoreOntologies#PowerSource.
 CommonCoreOntologies#HydraulicPowerSourceComponent :: CommonCoreOntologies#PowerSourceComponent.
 CommonCoreOntologies#HydraulicPowerTransferUnit :: CommonCoreOntologies#HydraulicPowerSourceComponent.
 CommonCoreOntologies#HydraulicValve :: CommonCoreOntologies#HydraulicPowerSourceComponent.
-CommonCoreOntologies#HydraulicValve ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#FluidControlArtifactFunction).
+// SubClassOf(CommonCoreOntologies:HydraulicValve ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:FluidControlArtifactFunction))
 CommonCoreOntologies#HydroelectricPowerPlant :: CommonCoreOntologies#ElectricPowerStation.
 CommonCoreOntologies#HydrographicFeature :: CommonCoreOntologies#GeographicFeature.
 CommonCoreOntologies#IdentificationFriendOrFoeTransponder :: CommonCoreOntologies#RadioTransponder.
@@ -1977,11 +1976,11 @@ CommonCoreOntologies#IncreaseOfSpecificallyDependentContinuant :: CommonCoreOnto
 CommonCoreOntologies#InertialNavigationSystem :: CommonCoreOntologies#NavigationSystem.
 CommonCoreOntologies#InfantryFightingVehicle :: CommonCoreOntologies#GroundMotorVehicle.
 CommonCoreOntologies#InformationBearingArtifact :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#InformationBearingArtifact ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: sumo#ContentBearingObject).
+// SubClassOf(CommonCoreOntologies:InformationBearingArtifact ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of sumo:ContentBearingObject))
 CommonCoreOntologies#InformationMediumArtifact :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#InformationProcessingArtifact :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#InfraredCamera :: CommonCoreOntologies#Camera.
-CommonCoreOntologies#InfraredCamera ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ThermalImagingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:InfraredCamera ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ThermalImagingArtifactFunction))
 CommonCoreOntologies#InfraredLightFrequency :: CommonCoreOntologies#ElectromagneticRadiationFrequency.
 CommonCoreOntologies#InfraredTelescope :: CommonCoreOntologies#Telescope.
 CommonCoreOntologies#Infrastructure :: CommonCoreOntologies#Artifact.
@@ -1997,13 +1996,13 @@ CommonCoreOntologies#InterpersonalRelationshipRole :: sumo#SocialRole.
 CommonCoreOntologies#Interphone :: CommonCoreOntologies#IntercommunicationSystem.
 CommonCoreOntologies#IntrasonicFrequency :: CommonCoreOntologies#SoundFrequency.
 CommonCoreOntologies#Iris :: CommonCoreOntologies#BodilyComponent.
-CommonCoreOntologies#Iris ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#Eye).
+// SubClassOf(CommonCoreOntologies:Iris ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:Eye))
 CommonCoreOntologies#JetEngine :: CommonCoreOntologies#InternalCombustionEngine.
 CommonCoreOntologies#JournalArticle :: CommonCoreOntologies#InformationBearingArtifact.
 CommonCoreOntologies#LandMine :: CommonCoreOntologies#ExplosiveWeapon.
 CommonCoreOntologies#Landfill :: CommonCoreOntologies#WasteManagementFacility.
 CommonCoreOntologies#LandlineTelephone :: CommonCoreOntologies#Telephone.
-CommonCoreOntologies#LandlineTelephone ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#WiredCommunicationArtifactFunction).
+// SubClassOf(CommonCoreOntologies:LandlineTelephone ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:WiredCommunicationArtifactFunction))
 CommonCoreOntologies#LargeScaleRocketLauncher :: CommonCoreOntologies#RocketLauncher.
 CommonCoreOntologies#Laser :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#LeadAcidElectricBattery :: CommonCoreOntologies#SecondaryCellElectricBattery.
@@ -2013,7 +2012,7 @@ CommonCoreOntologies#LegalInstrument :: CommonCoreOntologies#ImmaterialArtifact.
 CommonCoreOntologies#LegalSystemAct :: CommonCoreOntologies#IntentionalAct.
 CommonCoreOntologies#Length :: CommonCoreOntologies#OneDimensionalExtent.
 CommonCoreOntologies#LifeEvent :: CommonCoreOntologies#FiatProcessPart.
-CommonCoreOntologies#LifeEvent ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#BiographicalLife).
+// SubClassOf(CommonCoreOntologies:LifeEvent ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:BiographicalLife))
 CommonCoreOntologies#LifeSupportArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#LiftingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#LightMachineGun :: CommonCoreOntologies#LongGun.
@@ -2085,16 +2084,16 @@ CommonCoreOntologies#Mine :: CommonCoreOntologies#Facility.
 CommonCoreOntologies#MinimumSpeedArtifactFunction :: CommonCoreOntologies#SpeedArtifactFunction.
 CommonCoreOntologies#MinimumSpeedArtifactFunctionSpecification :: CommonCoreOntologies#SpeedArtifactFunctionSpecification.
 CommonCoreOntologies#Minute :: sumo#TimePoint.
-CommonCoreOntologies#Minute ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Hour).
+// SubClassOf(CommonCoreOntologies:Minute ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Hour))
 CommonCoreOntologies#Mirror :: CommonCoreOntologies#OpticalInstrument.
-CommonCoreOntologies#Mirror ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ReflectionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Mirror ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ReflectionArtifactFunction))
 CommonCoreOntologies#MissileLaunchSite :: CommonCoreOntologies#MilitaryFacility.
 CommonCoreOntologies#MissileLauncher :: CommonCoreOntologies#ProjectileLauncher.
 CommonCoreOntologies#MobileTelephone :: CommonCoreOntologies#Telephone.
 CommonCoreOntologies#Momentum :: EventOntology#ProcessProfile.
 CommonCoreOntologies#Money :: CommonCoreOntologies#FinancialInstrument.
 CommonCoreOntologies#Month :: sumo#TimePoint.
-CommonCoreOntologies#Month ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Year).
+// SubClassOf(CommonCoreOntologies:Month ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Year))
 CommonCoreOntologies#Morning :: sumo#TimePoint.
 CommonCoreOntologies#Mortar :: CommonCoreOntologies#Cannon.
 CommonCoreOntologies#Mosque :: CommonCoreOntologies#ReligiousFacility.
@@ -2107,19 +2106,19 @@ CommonCoreOntologies#Motorcycle :: CommonCoreOntologies#GroundMotorVehicle.
 CommonCoreOntologies#MountedGun :: CommonCoreOntologies#Firearm.
 CommonCoreOntologies#MovingTargetIndicationArtifactFunction :: CommonCoreOntologies#RadarImagingArtifactFunction.
 CommonCoreOntologies#MultiDayTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiDayTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Day).
+// SubClassOf(CommonCoreOntologies:MultiDayTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Day))
 CommonCoreOntologies#MultiHourTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiHourTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Hour).
+// SubClassOf(CommonCoreOntologies:MultiHourTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Hour))
 CommonCoreOntologies#MultiMinuteTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiMinuteTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Minute).
+// SubClassOf(CommonCoreOntologies:MultiMinuteTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Minute))
 CommonCoreOntologies#MultiMonthTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiMonthTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Month).
+// SubClassOf(CommonCoreOntologies:MultiMonthTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Month))
 CommonCoreOntologies#MultiSecondTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiSecondTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Second).
+// SubClassOf(CommonCoreOntologies:MultiSecondTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Second))
 CommonCoreOntologies#MultiWeekTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiWeekTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Week).
+// SubClassOf(CommonCoreOntologies:MultiWeekTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Week))
 CommonCoreOntologies#MultiYearTemporalInterval :: sumo#TimePoint.
-CommonCoreOntologies#MultiYearTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies#interval_contains :: CommonCoreOntologies#Year).
+// SubClassOf(CommonCoreOntologies:MultiYearTemporalInterval ObjectSomeValuesFrom(CommonCoreOntologies:interval_contains CommonCoreOntologies:Year))
 CommonCoreOntologies#NaturalProcess :: sumo#Process.
 CommonCoreOntologies#NavigationArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#NavigationSystem :: CommonCoreOntologies#Artifact.
@@ -2144,14 +2143,14 @@ CommonCoreOntologies#ObjectTrack :: sumo#GeographicArea.
 CommonCoreOntologies#ObjectTrack :: CommonCoreOntologies#GeospatialLocation.
 CommonCoreOntologies#ObjectTrackPoint :: sumo#GeographicArea.
 CommonCoreOntologies#ObjectTrackPoint :: CommonCoreOntologies#GeospatialLocation.
-CommonCoreOntologies#ObjectTrackPoint ObjectSomeValuesFrom(CommonCoreOntologies#spatial_part_of :: CommonCoreOntologies#ObjectTrack).
+// SubClassOf(CommonCoreOntologies:ObjectTrackPoint ObjectSomeValuesFrom(CommonCoreOntologies:spatial_part_of CommonCoreOntologies:ObjectTrack))
 CommonCoreOntologies#Objective :: AE#DirectiveInformationContentEntity.
 CommonCoreOntologies#Oblong :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#ObservationArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
-CommonCoreOntologies#ObservationArtifactFunction ObjectSomeValuesFrom(CommonCoreOntologies#prescribed_by :: CommonCoreOntologies#ObservationArtifactFunctionSpecification).
+// SubClassOf(CommonCoreOntologies:ObservationArtifactFunction ObjectSomeValuesFrom(CommonCoreOntologies:prescribed_by CommonCoreOntologies:ObservationArtifactFunctionSpecification))
 CommonCoreOntologies#ObservationArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
-CommonCoreOntologies#ObservationArtifactFunctionSpecification ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#ArtifactModel).
-CommonCoreOntologies#ObservationArtifactFunctionSpecification ObjectSomeValuesFrom(CommonCoreOntologies#prescribes :: CommonCoreOntologies#ObservationArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ObservationArtifactFunctionSpecification ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:ArtifactModel))
+// SubClassOf(CommonCoreOntologies:ObservationArtifactFunctionSpecification ObjectSomeValuesFrom(CommonCoreOntologies:prescribes CommonCoreOntologies:ObservationArtifactFunction))
 CommonCoreOntologies#OccupationRole :: sumo#SocialRole.
 CommonCoreOntologies#OcularProsthesis :: CommonCoreOntologies#ArtificialEye.
 CommonCoreOntologies#OfficeBuilding :: CommonCoreOntologies#RetailFacility.
@@ -2163,23 +2162,23 @@ CommonCoreOntologies#OperationalArea :: CommonCoreOntologies#GeospatialLocation.
 CommonCoreOntologies#OperationalStasis :: CommonCoreOntologies#StasisOfArtifactOperationality.
 CommonCoreOntologies#OperatorRole :: sumo#SocialRole.
 CommonCoreOntologies#OpticalCamera :: CommonCoreOntologies#Camera.
-CommonCoreOntologies#OpticalCamera ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#OpticalProcessingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:OpticalCamera ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:OpticalProcessingArtifactFunction))
 CommonCoreOntologies#OpticalCommunicationArtifactFunction :: CommonCoreOntologies#ElectromagneticCommunicationArtifactFunction.
 CommonCoreOntologies#OpticalCommunicationArtifactFunctionSpecification :: CommonCoreOntologies#ElectromagneticCommunicationArtifactFunctionSpecification.
 CommonCoreOntologies#OpticalFocusingArtifactFunction :: CommonCoreOntologies#OpticalProcessingArtifactFunction.
 CommonCoreOntologies#OpticalInstrument :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#OpticalLens :: CommonCoreOntologies#OpticalInstrument.
 CommonCoreOntologies#OpticalMicroscope :: CommonCoreOntologies#Microscope.
-CommonCoreOntologies#OpticalMicroscope ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#OpticalProcessingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:OpticalMicroscope ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:OpticalProcessingArtifactFunction))
 CommonCoreOntologies#OpticalProcessingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#OpticalProperty :: CommonCoreOntologies#ElectromagneticRadiationProperty.
 CommonCoreOntologies#OpticalTelescope :: CommonCoreOntologies#Telescope.
-CommonCoreOntologies#OpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#OpticalProcessingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:OpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:OpticalProcessingArtifactFunction))
 CommonCoreOntologies#Orange :: CommonCoreOntologies#Color.
 CommonCoreOntologies#Organization :: CommonCoreOntologies#GroupOfAgents.
 CommonCoreOntologies#OrganizationCapability :: CommonCoreOntologies#AgentCapability.
 CommonCoreOntologies#OrganizationMember :: CommonCoreOntologies#Person.
-CommonCoreOntologies#OrganizationMember ObjectSomeValuesFrom(CommonCoreOntologies#is_affiliated_with :: CommonCoreOntologies#Organization).
+// SubClassOf(CommonCoreOntologies:OrganizationMember ObjectSomeValuesFrom(CommonCoreOntologies:is_affiliated_with CommonCoreOntologies:Organization))
 CommonCoreOntologies#OrganizationMemberRole :: sumo#SocialRole.
 CommonCoreOntologies#Orientation :: AE#RelationalAttribute.
 CommonCoreOntologies#OrientationControlArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
@@ -2194,10 +2193,10 @@ CommonCoreOntologies#PatchAntenna :: CommonCoreOntologies#RadioAntenna.
 CommonCoreOntologies#PatchReceiver :: CommonCoreOntologies#RadioReceiver.
 CommonCoreOntologies#Payload :: sumo#Object.
 CommonCoreOntologies#PayloadCapacity :: CommonCoreOntologies#ArtifactFunction.
-CommonCoreOntologies#PayloadCapacity ObjectSomeValuesFrom(CommonCoreOntologies#inheres_in :: CommonCoreOntologies#Vehicle).
+// SubClassOf(CommonCoreOntologies:PayloadCapacity ObjectSomeValuesFrom(CommonCoreOntologies:inheres_in CommonCoreOntologies:Vehicle))
 CommonCoreOntologies#PayloadCapacitySpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
-CommonCoreOntologies#PayloadCapacitySpecification ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#ArtifactModel).
-CommonCoreOntologies#PayloadCapacitySpecification ObjectSomeValuesFrom(CommonCoreOntologies#prescribes :: CommonCoreOntologies#PayloadCapacity).
+// SubClassOf(CommonCoreOntologies:PayloadCapacitySpecification ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:ArtifactModel))
+// SubClassOf(CommonCoreOntologies:PayloadCapacitySpecification ObjectSomeValuesFrom(CommonCoreOntologies:prescribes CommonCoreOntologies:PayloadCapacity))
 CommonCoreOntologies#Perimeter :: CommonCoreOntologies#OneDimensionalExtent.
 CommonCoreOntologies#Periscope :: CommonCoreOntologies#OpticalInstrument.
 CommonCoreOntologies#Person :: sumo#CognitiveAgent.
@@ -2213,7 +2212,7 @@ CommonCoreOntologies#Pier :: CommonCoreOntologies#TransportationFacility.
 CommonCoreOntologies#Pipeline :: CommonCoreOntologies#ProductTransportFacility.
 CommonCoreOntologies#Pitch :: CommonCoreOntologies#SoundProcessProfile.
 CommonCoreOntologies#PlanSpecification :: AE#DirectiveInformationContentEntity.
-CommonCoreOntologies#PlanSpecification ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#Objective).
+// SubClassOf(CommonCoreOntologies:PlanSpecification ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:Objective))
 CommonCoreOntologies#PneumaticPowerSource :: CommonCoreOntologies#PowerSource.
 CommonCoreOntologies#PointingOrientation :: CommonCoreOntologies#Orientation.
 CommonCoreOntologies#PoisonArtifactFunction :: CommonCoreOntologies#DamagingArtifactFunction.
@@ -2231,7 +2230,7 @@ CommonCoreOntologies#PortionOfFood :: CommonCoreOntologies#PortionOfProcessedMat
 CommonCoreOntologies#PortionOfFuel :: CommonCoreOntologies#PortionOfMaterial.
 CommonCoreOntologies#PortionOfGalliumArsenide :: CommonCoreOntologies#PortionOfMaterial.
 CommonCoreOntologies#PortionOfLiquidHelium :: CommonCoreOntologies#PortionOfCryogenicMaterial.
-CommonCoreOntologies#PortionOfLiquidHelium ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#CoolingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:PortionOfLiquidHelium ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:CoolingArtifactFunction))
 CommonCoreOntologies#PortionOfLiquidHydrogen :: CommonCoreOntologies#PortionOfCryogenicMaterial.
 CommonCoreOntologies#PortionOfLiquidNitrogen :: CommonCoreOntologies#PortionOfCryogenicMaterial.
 CommonCoreOntologies#PortionOfLiquidOxygen :: CommonCoreOntologies#PortionOfCryogenicMaterial.
@@ -2244,15 +2243,15 @@ CommonCoreOntologies#PostOffice :: CommonCoreOntologies#MailingFacility.
 CommonCoreOntologies#Power :: QualityOntology#ProcessProfile.
 CommonCoreOntologies#PowerInvertingArtifactFunction :: CommonCoreOntologies#CurrentConversionArtifactFunction.
 CommonCoreOntologies#PowerRectifier :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#PowerRectifier ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#PowerRectifyingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:PowerRectifier ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:PowerRectifyingArtifactFunction))
 CommonCoreOntologies#PowerRectifyingArtifactFunction :: CommonCoreOntologies#CurrentConversionArtifactFunction.
 CommonCoreOntologies#PowerSource :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#PowerSourceComponent :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#PowerTool :: CommonCoreOntologies#Tool.
 CommonCoreOntologies#PowerTransformer :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#PowerTransformer ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ElectromagneticInductionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:PowerTransformer ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectromagneticInductionArtifactFunction))
 CommonCoreOntologies#PowerTransformerRectifierUnit :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#PowerTransformerRectifierUnit ObjectIntersectionOf(ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of CommonCoreOntologies#ElectromagneticInductionArtifactFunction) ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#PowerRectifyingArtifactFunction)).
+// SubClassOf(CommonCoreOntologies:PowerTransformerRectifierUnit ObjectIntersectionOf(ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectromagneticInductionArtifactFunction) ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:PowerRectifyingArtifactFunction)))
 CommonCoreOntologies#PowerTransmissionArtifact :: CommonCoreOntologies#PropulsionComponent.
 CommonCoreOntologies#PowerTransmissionLine :: CommonCoreOntologies#ProductTransportFacility.
 CommonCoreOntologies#PoweringArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
@@ -2276,7 +2275,7 @@ CommonCoreOntologies#PropulsionArtifactFunctionSpecification :: CommonCoreOntolo
 CommonCoreOntologies#PropulsionComponent :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#PropulsionControlSystem :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#PropulsionSystem :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#PropulsionSystem ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#PropulsionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:PropulsionSystem ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:PropulsionArtifactFunction))
 CommonCoreOntologies#Prosthesis :: CommonCoreOntologies#MedicalArtifact.
 CommonCoreOntologies#ProstheticArm :: CommonCoreOntologies#Prosthesis.
 CommonCoreOntologies#ProstheticFoot :: CommonCoreOntologies#Prosthesis.
@@ -2306,29 +2305,29 @@ CommonCoreOntologies#RadioCommunicationInstrument :: CommonCoreOntologies#Commun
 CommonCoreOntologies#RadioCommunicationInterferenceArtifactFunction :: CommonCoreOntologies#CommunicationInterferenceArtifactFunction.
 CommonCoreOntologies#RadioCommunicationReceptionArtifactFunction :: CommonCoreOntologies#CommunicationReceptionArtifactFunction.
 CommonCoreOntologies#RadioCommunicationRelayArtifactFunction :: CommonCoreOntologies#CommunicationRelayArtifactFunction.
-CommonCoreOntologies#RadioCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioCommunicationArtifactFunction).
-CommonCoreOntologies#RadioCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioCommunicationReceptionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioCommunicationArtifactFunction))
+// SubClassOf(CommonCoreOntologies:RadioCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioCommunicationReceptionArtifactFunction))
 CommonCoreOntologies#RadioFrequency :: CommonCoreOntologies#ElectromagneticRadiationFrequency.
 CommonCoreOntologies#RadioInterference :: sumo#Process.
 CommonCoreOntologies#RadioReceiver :: CommonCoreOntologies#RadioCommunicationInstrument.
-CommonCoreOntologies#RadioReceiver ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RadioCommunicationReceptionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioReceiver ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RadioCommunicationReceptionArtifactFunction))
 CommonCoreOntologies#RadioRelayStation :: CommonCoreOntologies#CommunicationsFacility.
-CommonCoreOntologies#RadioRelayStation ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioAntenna).
-CommonCoreOntologies#RadioRelayStation ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioReceiver).
-CommonCoreOntologies#RadioRelayStation ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioTransmitter).
-CommonCoreOntologies#RadioRelayStation ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RadioCommunicationRelayArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioRelayStation ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioAntenna))
+// SubClassOf(CommonCoreOntologies:RadioRelayStation ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioReceiver))
+// SubClassOf(CommonCoreOntologies:RadioRelayStation ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioTransmitter))
+// SubClassOf(CommonCoreOntologies:RadioRelayStation ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RadioCommunicationRelayArtifactFunction))
 CommonCoreOntologies#RadioRepeater :: CommonCoreOntologies#RadioTransceiver.
-CommonCoreOntologies#RadioRepeater ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#CommunicationRelayArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioRepeater ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:CommunicationRelayArtifactFunction))
 CommonCoreOntologies#RadioTelescope :: CommonCoreOntologies#Telescope.
 CommonCoreOntologies#RadioTransceiver :: CommonCoreOntologies#RadioCommunicationInstrument.
-CommonCoreOntologies#RadioTransceiver ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioReceiver).
-CommonCoreOntologies#RadioTransceiver ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioTransmitter).
-CommonCoreOntologies#RadioTransceiver ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RadioCommunicationArtifactFunction).
-CommonCoreOntologies#RadioTransceiver ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RadioCommunicationReceptionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioTransceiver ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioReceiver))
+// SubClassOf(CommonCoreOntologies:RadioTransceiver ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioTransmitter))
+// SubClassOf(CommonCoreOntologies:RadioTransceiver ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RadioCommunicationArtifactFunction))
+// SubClassOf(CommonCoreOntologies:RadioTransceiver ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RadioCommunicationReceptionArtifactFunction))
 CommonCoreOntologies#RadioTransmitter :: CommonCoreOntologies#RadioCommunicationInstrument.
-CommonCoreOntologies#RadioTransmitter ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RadioCommunicationArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioTransmitter ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RadioCommunicationArtifactFunction))
 CommonCoreOntologies#RadioTransponder :: CommonCoreOntologies#RadioCommunicationInstrument.
-CommonCoreOntologies#RadioTransponder ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RadioCommunicationRelayArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RadioTransponder ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RadioCommunicationRelayArtifactFunction))
 CommonCoreOntologies#RadioWaveConversionArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#Radioactive :: AE#Attribute.
 CommonCoreOntologies#RadiologicalWeapon :: CommonCoreOntologies#Weapon.
@@ -2344,7 +2343,7 @@ CommonCoreOntologies#RandomWireAntenna :: CommonCoreOntologies#WireAntenna.
 CommonCoreOntologies#ReactantArtifactFunction :: CommonCoreOntologies#ChemicalReactionArtifactFunction.
 CommonCoreOntologies#ReactantArtifactFunctionSpecification :: CommonCoreOntologies#ChemicalReactionArtifactFunctionSpecification.
 CommonCoreOntologies#ReactionEngine :: CommonCoreOntologies#Engine.
-CommonCoreOntologies#ReactionEngine ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#PropulsionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ReactionEngine ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:PropulsionArtifactFunction))
 CommonCoreOntologies#ReactionMass :: sumo#Object.
 CommonCoreOntologies#ReciprocatingSteamEngine :: CommonCoreOntologies#SteamEngine.
 CommonCoreOntologies#RecordingDevice :: CommonCoreOntologies#InformationProcessingArtifact.
@@ -2352,12 +2351,12 @@ CommonCoreOntologies#Rectangular :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#Red :: CommonCoreOntologies#Color.
 CommonCoreOntologies#Refinery :: CommonCoreOntologies#Factory.
 CommonCoreOntologies#ReflectingOpticalTelescope :: CommonCoreOntologies#OpticalTelescope.
-CommonCoreOntologies#ReflectingOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ReflectionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ReflectingOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ReflectionArtifactFunction))
 CommonCoreOntologies#ReflectionArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#ReflectivePrism :: CommonCoreOntologies#Prism.
-CommonCoreOntologies#ReflectivePrism ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ReflectionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ReflectivePrism ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ReflectionArtifactFunction))
 CommonCoreOntologies#RefractingOpticalTelescope :: CommonCoreOntologies#OpticalTelescope.
-CommonCoreOntologies#RefractingOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#RefractionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:RefractingOpticalTelescope ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:RefractionArtifactFunction))
 CommonCoreOntologies#RefractionArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#Refractivity :: CommonCoreOntologies#RadiationReflectivity.
 CommonCoreOntologies#ReligiousArtifactFunction :: CommonCoreOntologies#ServiceArtifactFunction.
@@ -2367,10 +2366,10 @@ CommonCoreOntologies#Report :: CommonCoreOntologies#Document.
 CommonCoreOntologies#ResearchAndDevelopmentArtifactFunction :: CommonCoreOntologies#ServiceArtifactFunction.
 CommonCoreOntologies#ResearchAndDevelopmentArtifactFunctionSpecification :: CommonCoreOntologies#ServiceArtifactFunctionSpecification.
 CommonCoreOntologies#ResearchArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
-CommonCoreOntologies#ResearchArtifactFunction ObjectSomeValuesFrom(CommonCoreOntologies#prescribed_by :: CommonCoreOntologies#ResearchArtifactFunctionSpecification).
+// SubClassOf(CommonCoreOntologies:ResearchArtifactFunction ObjectSomeValuesFrom(CommonCoreOntologies:prescribed_by CommonCoreOntologies:ResearchArtifactFunctionSpecification))
 CommonCoreOntologies#ResearchArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
-CommonCoreOntologies#ResearchArtifactFunctionSpecification ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#ArtifactModel).
-CommonCoreOntologies#ResearchArtifactFunctionSpecification ObjectSomeValuesFrom(CommonCoreOntologies#prescribes :: CommonCoreOntologies#ResearchArtifactFunction).
+// SubClassOf(CommonCoreOntologies:ResearchArtifactFunctionSpecification ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:ArtifactModel))
+// SubClassOf(CommonCoreOntologies:ResearchArtifactFunctionSpecification ObjectSomeValuesFrom(CommonCoreOntologies:prescribes CommonCoreOntologies:ResearchArtifactFunction))
 CommonCoreOntologies#Reservoir :: CommonCoreOntologies#StorageFacility.
 CommonCoreOntologies#ResidentialArtifactFunction :: CommonCoreOntologies#ServiceArtifactFunction.
 CommonCoreOntologies#ResidentialArtifactFunctionSpecification :: CommonCoreOntologies#ServiceArtifactFunctionSpecification.
@@ -2386,16 +2385,16 @@ CommonCoreOntologies#Rifle :: CommonCoreOntologies#LongGun.
 CommonCoreOntologies#Road :: CommonCoreOntologies#TransportationInfrastructure.
 CommonCoreOntologies#RoadJunction :: CommonCoreOntologies#TransportationInfrastructure.
 CommonCoreOntologies#Rocket :: CommonCoreOntologies#Vehicle.
-CommonCoreOntologies#Rocket ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RocketEngine).
-CommonCoreOntologies#Rocket ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#PropulsionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Rocket ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RocketEngine))
+// SubClassOf(CommonCoreOntologies:Rocket ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:PropulsionArtifactFunction))
 CommonCoreOntologies#RocketEngine :: CommonCoreOntologies#JetEngine.
 CommonCoreOntologies#RocketLauncher :: CommonCoreOntologies#ProjectileLauncher.
 CommonCoreOntologies#RocketPod :: CommonCoreOntologies#RocketLauncher.
 CommonCoreOntologies#RocketPropelledGrenade :: CommonCoreOntologies#UnguidedRocket.
 CommonCoreOntologies#Rosy :: CommonCoreOntologies#Color.
 CommonCoreOntologies#RotationalMotion :: sumo#Process.
-CommonCoreOntologies#RotationalMotion ObjectSomeValuesFrom(CommonCoreOntologies#has_process_part :: CommonCoreOntologies#AngularVelocity).
-CommonCoreOntologies#RotationalMotion ObjectSomeValuesFrom(CommonCoreOntologies#occurs_at :: CommonCoreOntologies#ThreeDimensionalPosition).
+// SubClassOf(CommonCoreOntologies:RotationalMotion ObjectSomeValuesFrom(CommonCoreOntologies:has_process_part CommonCoreOntologies:AngularVelocity))
+// SubClassOf(CommonCoreOntologies:RotationalMotion ObjectSomeValuesFrom(CommonCoreOntologies:occurs_at CommonCoreOntologies:ThreeDimensionalPosition))
 CommonCoreOntologies#Round :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#RoundShot :: CommonCoreOntologies#PortionOfAmmunition.
 CommonCoreOntologies#SatelliteArtifact :: CommonCoreOntologies#Spacecraft.
@@ -2407,26 +2406,26 @@ CommonCoreOntologies#SeaLevel :: sumo#GeographicArea.
 CommonCoreOntologies#SeatOfLocalGovernment :: CommonCoreOntologies#GovernmentBuilding.
 CommonCoreOntologies#SeatOfNationalGovernment :: CommonCoreOntologies#GovernmentBuilding.
 CommonCoreOntologies#Second :: sumo#TimePoint.
-CommonCoreOntologies#Second ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Minute).
+// SubClassOf(CommonCoreOntologies:Second ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Minute))
 CommonCoreOntologies#SecondOrderAdministrativeRegion :: CommonCoreOntologies#GeopoliticalEntity.
-CommonCoreOntologies#SecondOrderAdministrativeRegion ObjectSomeValuesFrom(ro#proper_part_of :: CommonCoreOntologies#FirstOrderAdministrativeRegion).
+// SubClassOf(CommonCoreOntologies:SecondOrderAdministrativeRegion ObjectSomeValuesFrom(ro:proper_part_of CommonCoreOntologies:FirstOrderAdministrativeRegion))
 CommonCoreOntologies#SecondaryCellElectricBattery :: CommonCoreOntologies#ElectricBattery.
 CommonCoreOntologies#SemiAutomaticPistol :: CommonCoreOntologies#HandGun.
 CommonCoreOntologies#Semicircular :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#Sensor :: CommonCoreOntologies#Transducer.
-CommonCoreOntologies#Sensor ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#MeasurementArtifactFunction).
-CommonCoreOntologies#Sensor ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ObservationArtifactFunction).
-CommonCoreOntologies#Sensor ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#SensorArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Sensor ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:MeasurementArtifactFunction))
+// SubClassOf(CommonCoreOntologies:Sensor ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ObservationArtifactFunction))
+// SubClassOf(CommonCoreOntologies:Sensor ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:SensorArtifactFunction))
 CommonCoreOntologies#SensorArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#SensorDeploymentArtifactFunction :: CommonCoreOntologies#StructuralSupportArtifactFunction.
 CommonCoreOntologies#SensorPlatform :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#SensorPlatform ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#SensorDeploymentArtifactFunction).
+// SubClassOf(CommonCoreOntologies:SensorPlatform ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:SensorDeploymentArtifactFunction))
 CommonCoreOntologies#Serrated :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#ServiceArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#ServiceArtifactFunctionSpecification :: CommonCoreOntologies#ArtifactFunctionSpecification.
 CommonCoreOntologies#ServiceProvider :: CommonCoreOntologies#Organization.
 CommonCoreOntologies#SetOfEyes :: CommonCoreOntologies#BodilyComponent.
-CommonCoreOntologies#SetOfEyes ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#Eye).
+// SubClassOf(CommonCoreOntologies:SetOfEyes ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:Eye))
 CommonCoreOntologies#SewageTreatmentFacility :: CommonCoreOntologies#WasteManagementFacility.
 CommonCoreOntologies#Shaft :: CommonCoreOntologies#MachineElement.
 CommonCoreOntologies#ShapeQuality :: AE#Attribute.
@@ -2445,9 +2444,9 @@ CommonCoreOntologies#Sloped :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#SocialAct :: CommonCoreOntologies#IntentionalAct.
 CommonCoreOntologies#SoftXrayFrequency :: CommonCoreOntologies#XrayFrequency.
 CommonCoreOntologies#SolarPanel :: CommonCoreOntologies#ElectricalPowerSource.
-CommonCoreOntologies#SolarPanel ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ElectricalPowerProductionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:SolarPanel ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectricalPowerProductionArtifactFunction))
 CommonCoreOntologies#SolarPanelSystem :: CommonCoreOntologies#ElectricalPowerSource.
-CommonCoreOntologies#SolarPanelSystem ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ElectricalPowerProductionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:SolarPanelSystem ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectricalPowerProductionArtifactFunction))
 CommonCoreOntologies#SolventArtifactFunction :: CommonCoreOntologies#ChemicalReactionArtifactFunction.
 CommonCoreOntologies#SolventArtifactFunctionSpecification :: CommonCoreOntologies#ChemicalReactionArtifactFunctionSpecification.
 CommonCoreOntologies#SonicFrequency :: CommonCoreOntologies#SoundFrequency.
@@ -2500,8 +2499,8 @@ CommonCoreOntologies#SwitchArtifactFunctionSpecification :: CommonCoreOntologies
 CommonCoreOntologies#Synagogue :: CommonCoreOntologies#ReligiousFacility.
 CommonCoreOntologies#SyntheticApertureRadarImagingArtifactFunction :: CommonCoreOntologies#RadarImagingArtifactFunction.
 CommonCoreOntologies#SystemClock :: CommonCoreOntologies#TimekeepingInstrument.
-CommonCoreOntologies#SystemClock ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#Computer).
-CommonCoreOntologies#SystemClock ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#TimekeepingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:SystemClock ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:Computer))
+// SubClassOf(CommonCoreOntologies:SystemClock ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:TimekeepingArtifactFunction))
 CommonCoreOntologies#Tank :: CommonCoreOntologies#GroundMotorVehicle.
 CommonCoreOntologies#Tattoo :: CommonCoreOntologies#BodilyComponent.
 CommonCoreOntologies#TelecommunicationEndpoint :: CommonCoreOntologies#TelecommunicationNetworkNode.
@@ -2509,13 +2508,13 @@ CommonCoreOntologies#TelecommunicationInfrastructure :: CommonCoreOntologies#Inf
 CommonCoreOntologies#TelecommunicationInstrument :: CommonCoreOntologies#CommunicationInstrument.
 CommonCoreOntologies#TelecommunicationNetwork :: CommonCoreOntologies#TelecommunicationInfrastructure.
 CommonCoreOntologies#TelecommunicationNetworkNode :: CommonCoreOntologies#TelecommunicationInfrastructure.
-CommonCoreOntologies#TelecommunicationNetworkNode ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#TelecommunicationNetwork).
+// SubClassOf(CommonCoreOntologies:TelecommunicationNetworkNode ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:TelecommunicationNetwork))
 CommonCoreOntologies#TelecommunicationSwitchingNode :: CommonCoreOntologies#TelecommunicationNetworkNode.
 CommonCoreOntologies#TelemetryProcess :: sumo#Process.
 CommonCoreOntologies#Telephone :: CommonCoreOntologies#TelecommunicationInstrument.
 CommonCoreOntologies#TelephoneCall :: CommonCoreOntologies#ActOfCommunicationByMedia.
 CommonCoreOntologies#TelephoneLine :: CommonCoreOntologies#TelecommunicationInfrastructure.
-CommonCoreOntologies#TelephoneLine ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#TelecommunicationNetwork).
+// SubClassOf(CommonCoreOntologies:TelephoneLine ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:TelecommunicationNetwork))
 CommonCoreOntologies#TelephoneNetwork :: CommonCoreOntologies#TelecommunicationNetwork.
 CommonCoreOntologies#TelephoneSubscriberLine :: CommonCoreOntologies#TelephoneLine.
 CommonCoreOntologies#Telescope :: CommonCoreOntologies#ImagingInstrument.
@@ -2523,7 +2522,7 @@ CommonCoreOntologies#TelevisionBroadcast :: CommonCoreOntologies#ActOfCommunicat
 CommonCoreOntologies#Temperature :: AE#Attribute.
 CommonCoreOntologies#TemperatureMeasurementArtifactFunction :: CommonCoreOntologies#MeasurementArtifactFunction.
 CommonCoreOntologies#TerminalBoard :: CommonCoreOntologies#ElectricalPowerSourceComponent.
-CommonCoreOntologies#TerminalBoard ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ElectricalConnectorArtifactFunction).
+// SubClassOf(CommonCoreOntologies:TerminalBoard ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ElectricalConnectorArtifactFunction))
 CommonCoreOntologies#TerroristTrainingCamp :: CommonCoreOntologies#TrainingCamp.
 CommonCoreOntologies#TextMessaging :: CommonCoreOntologies#ActOfCommunicationByMedia.
 CommonCoreOntologies#Texture :: AE#Attribute.
@@ -2534,12 +2533,12 @@ CommonCoreOntologies#ThermalPowerPlant :: CommonCoreOntologies#ElectricPowerStat
 CommonCoreOntologies#Thickness :: CommonCoreOntologies#Depth.
 CommonCoreOntologies#Thin :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#ThirdOrderAdministrativeRegion :: CommonCoreOntologies#GeopoliticalEntity.
-CommonCoreOntologies#ThirdOrderAdministrativeRegion ObjectSomeValuesFrom(ro#proper_part_of :: CommonCoreOntologies#SecondOrderAdministrativeRegion).
+// SubClassOf(CommonCoreOntologies:ThirdOrderAdministrativeRegion ObjectSomeValuesFrom(ro:proper_part_of CommonCoreOntologies:SecondOrderAdministrativeRegion))
 CommonCoreOntologies#ThreeDimensionalExtent :: CommonCoreOntologies#SizeQuality.
 CommonCoreOntologies#ThreeDimensionalPath :: CommonCoreOntologies#ObjectTrack.
 CommonCoreOntologies#ThreeDimensionalPosition :: sumo#Region.
 CommonCoreOntologies#ThreeDimensionalPosition :: CommonCoreOntologies#ObjectTrackPoint.
-CommonCoreOntologies#ThreeDimensionalPosition ObjectSomeValuesFrom(ro#part_of :: CommonCoreOntologies#ThreeDimensionalPath).
+// SubClassOf(CommonCoreOntologies:ThreeDimensionalPosition ObjectSomeValuesFrom(ro:part_of CommonCoreOntologies:ThreeDimensionalPath))
 CommonCoreOntologies#ThreeDimensionalShape :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#Thrust :: CommonCoreOntologies#Force.
 CommonCoreOntologies#Timbre :: CommonCoreOntologies#SoundProcessProfile.
@@ -2558,8 +2557,8 @@ CommonCoreOntologies#TrainingCamp :: CommonCoreOntologies#Facility.
 CommonCoreOntologies#Transcript :: CommonCoreOntologies#Document.
 CommonCoreOntologies#Transducer :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#TranslationalMotion :: CommonCoreOntologies#ActOfPositionChange.
-CommonCoreOntologies#TranslationalMotion ObjectSomeValuesFrom(CommonCoreOntologies#has_process_part :: CommonCoreOntologies#Velocity).
-CommonCoreOntologies#TranslationalMotion ObjectSomeValuesFrom(CommonCoreOntologies#occurs_at :: CommonCoreOntologies#ThreeDimensionalPosition).
+// SubClassOf(CommonCoreOntologies:TranslationalMotion ObjectSomeValuesFrom(CommonCoreOntologies:has_process_part CommonCoreOntologies:Velocity))
+// SubClassOf(CommonCoreOntologies:TranslationalMotion ObjectSomeValuesFrom(CommonCoreOntologies:occurs_at CommonCoreOntologies:ThreeDimensionalPosition))
 CommonCoreOntologies#Translucent :: CommonCoreOntologies#Opacity.
 CommonCoreOntologies#Transparent :: CommonCoreOntologies#Opacity.
 CommonCoreOntologies#TransportationFacility :: CommonCoreOntologies#Facility.
@@ -2569,7 +2568,7 @@ CommonCoreOntologies#Triangular :: CommonCoreOntologies#ShapeQuality.
 CommonCoreOntologies#TrimTab :: CommonCoreOntologies#ControlSurface.
 CommonCoreOntologies#TripleInertialNavigationSystem :: CommonCoreOntologies#InertialNavigationSystem.
 CommonCoreOntologies#Tripod :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#Tripod ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#StructuralSupportArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Tripod ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:StructuralSupportArtifactFunction))
 CommonCoreOntologies#Truck :: CommonCoreOntologies#GroundMotorVehicle.
 CommonCoreOntologies#Tunnel :: CommonCoreOntologies#TransportationInfrastructure.
 CommonCoreOntologies#TurbineSteamEngine :: CommonCoreOntologies#SteamEngine.
@@ -2584,18 +2583,18 @@ CommonCoreOntologies#UltravioletLightFrequency :: CommonCoreOntologies#Electroma
 CommonCoreOntologies#UltravioletTelescope :: CommonCoreOntologies#Telescope.
 CommonCoreOntologies#UnalliedPerson :: CommonCoreOntologies#Person.
 CommonCoreOntologies#UnderActiveControl :: CommonCoreOntologies#ActiveStasis.
-CommonCoreOntologies#UnderActiveControl ObjectSomeValuesFrom(CommonCoreOntologies#has_process_part :: CommonCoreOntologies#ActOfArtifactEmployment).
+// SubClassOf(CommonCoreOntologies:UnderActiveControl ObjectSomeValuesFrom(CommonCoreOntologies:has_process_part CommonCoreOntologies:ActOfArtifactEmployment))
 CommonCoreOntologies#UndergroundMine :: CommonCoreOntologies#Mine.
 CommonCoreOntologies#UnderwaterMine :: CommonCoreOntologies#Mine.
 CommonCoreOntologies#UnguidedRocket :: CommonCoreOntologies#PortionOfAmmunition.
 CommonCoreOntologies#UnintentionalAct :: CommonCoreOntologies#Act.
 CommonCoreOntologies#Vehicle :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#Vehicle ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ConveyanceArtifactFunction).
+// SubClassOf(CommonCoreOntologies:Vehicle ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ConveyanceArtifactFunction))
 CommonCoreOntologies#VehicleControlSystem :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#VehicleControlSystemComponent :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#VehicleEnduranceArtifactFunctionSpecification :: CommonCoreOntologies#MotionArtifactFunctionSpecification.
 CommonCoreOntologies#VehicleFrame :: CommonCoreOntologies#Artifact.
-CommonCoreOntologies#VehicleFrame ObjectSomeValuesFrom(CommonCoreOntologies#bearer_of :: CommonCoreOntologies#ContainingArtifactFunction).
+// SubClassOf(CommonCoreOntologies:VehicleFrame ObjectSomeValuesFrom(CommonCoreOntologies:bearer_of CommonCoreOntologies:ContainingArtifactFunction))
 CommonCoreOntologies#VehicleFramePart :: CommonCoreOntologies#Artifact.
 CommonCoreOntologies#VehicleRangeArtifactFunctionSpecification :: CommonCoreOntologies#MotionArtifactFunctionSpecification.
 CommonCoreOntologies#VehicleTrack :: CommonCoreOntologies#ObjectTrack.
@@ -2613,7 +2612,7 @@ CommonCoreOntologies#Violet :: CommonCoreOntologies#Color.
 CommonCoreOntologies#VisibleLightFrequency :: CommonCoreOntologies#ElectromagneticRadiationFrequency.
 CommonCoreOntologies#VisibleLightReflectionProcess :: sumo#Process.
 CommonCoreOntologies#VisibleObservation :: sumo#Process.
-CommonCoreOntologies#VisibleObservation ObjectSomeValuesFrom(CommonCoreOntologies#has_process_part :: CommonCoreOntologies#VisibleLightReflectionProcess).
+// SubClassOf(CommonCoreOntologies:VisibleObservation ObjectSomeValuesFrom(CommonCoreOntologies:has_process_part CommonCoreOntologies:VisibleLightReflectionProcess))
 CommonCoreOntologies#VisualProsthesis :: CommonCoreOntologies#ArtificialEye.
 CommonCoreOntologies#VoltageRegulatingArtifactFunction :: CommonCoreOntologies#ArtifactFunction.
 CommonCoreOntologies#Vulnerability :: AE#Attribute.
@@ -2632,7 +2631,7 @@ CommonCoreOntologies#Web_Page :: CommonCoreOntologies#InformationBearingArtifact
 CommonCoreOntologies#Webcast :: CommonCoreOntologies#ActOfCommunicationByMedia.
 CommonCoreOntologies#Wedding :: CommonCoreOntologies#ActOfCeremony.
 CommonCoreOntologies#Week :: sumo#TimePoint.
-CommonCoreOntologies#Week ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Month).
+// SubClassOf(CommonCoreOntologies:Week ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Month))
 CommonCoreOntologies#Weight :: AE#Attribute.
 CommonCoreOntologies#Wetness :: AE#Attribute.
 CommonCoreOntologies#WettingAgentArtifactFunction :: CommonCoreOntologies#SurfactantArtifactFunction.
@@ -2647,8 +2646,8 @@ CommonCoreOntologies#WiredCommunicationArtifactFunction :: CommonCoreOntologies#
 CommonCoreOntologies#WiredCommunicationArtifactFunctionSpecification :: CommonCoreOntologies#CommunicationArtifactFunctionSpecification.
 CommonCoreOntologies#WiredCommunicationReceptionArtifactFunction :: CommonCoreOntologies#CommunicationReceptionArtifactFunction.
 CommonCoreOntologies#WiredCommunicationRelayArtifactFunction :: CommonCoreOntologies#CommunicationRelayArtifactFunction.
-CommonCoreOntologies#WiredCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioCommunicationArtifactFunction).
-CommonCoreOntologies#WiredCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro#has_part :: CommonCoreOntologies#RadioCommunicationReceptionArtifactFunction).
+// SubClassOf(CommonCoreOntologies:WiredCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioCommunicationArtifactFunction))
+// SubClassOf(CommonCoreOntologies:WiredCommunicationRelayArtifactFunction ObjectSomeValuesFrom(ro:has_part CommonCoreOntologies:RadioCommunicationReceptionArtifactFunction))
 CommonCoreOntologies#WirelessNetworkTelephoneCall :: CommonCoreOntologies#TelephoneCall.
 CommonCoreOntologies#WirelessTelecommunicationNetwork :: CommonCoreOntologies#TelecommunicationNetwork.
 CommonCoreOntologies#WoundedStasis :: CommonCoreOntologies#DamagedStasis.
@@ -2656,7 +2655,7 @@ CommonCoreOntologies#XRayMicroscope :: CommonCoreOntologies#Microscope.
 CommonCoreOntologies#XRayTelescope :: CommonCoreOntologies#Telescope.
 CommonCoreOntologies#XrayFrequency :: CommonCoreOntologies#ElectromagneticRadiationFrequency.
 CommonCoreOntologies#Year :: sumo#TimePoint.
-CommonCoreOntologies#Year ObjectSomeValuesFrom(CommonCoreOntologies#interval_during :: CommonCoreOntologies#Decade).
+// SubClassOf(CommonCoreOntologies:Year ObjectSomeValuesFrom(CommonCoreOntologies:interval_during CommonCoreOntologies:Decade))
 CommonCoreOntologies#Yellow :: CommonCoreOntologies#Color.
 AgentOntology#CorpuscularObject :: AgentOntology#SelfConnectedObject.
 AgentOntology#OrganicThing :: AgentOntology#SelfConnectedObject.
@@ -2950,3 +2949,5 @@ CommonCoreOntologies#YardMeasurementUnit : CommonCoreOntologies#MeasurementUnitO
 CommonCoreOntologies#YearMeasurementUnit : CommonCoreOntologies#MeasurementUnitOfTime.
 CommonCoreOntologies#YemeniRial : CommonCoreOntologies#CurrencyUnit.
 CommonCoreOntologies#ZambiaKwacha : CommonCoreOntologies#CurrencyUnit.
+sumo#Abstract :: sumo#Entity.
+sumo#Physical :: sumo#Entity.
