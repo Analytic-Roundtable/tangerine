@@ -1,0 +1,141 @@
+{
+    "analytics": [],
+    "assertions": [
+        {
+            "A": {
+                "O": "sumo#LengthMeasure",
+                "P": "a",
+                "S": "collection_0"
+            }
+        },
+        {
+            "A": {
+                "O": "sumo#Region",
+                "P": "a",
+                "S": "collection_1"
+            }
+        },
+        {
+            "A": {
+                "O": "sumo#TimeDuration",
+                "P": "a",
+                "S": "collection_2"
+            }
+        },
+        {
+            "A": {
+                "O": "sumo#Region",
+                "P": "a",
+                "S": "collection_3"
+            }
+        },
+        {
+            "A": {
+                "O": "sumo#TransitRoute",
+                "P": "a",
+                "S": "collection_4"
+            }
+        },
+        {
+            "A": {
+                "O": "collection_0",
+                "P": "AE#hasDistance",
+                "S": "collection_4"
+            }
+        },
+        {
+            "A": {
+                "D": "5399.120799",
+                "P": "AE#numericValue",
+                "S": "collection_0"
+            }
+        },
+        {
+            "A": {
+                "D": "meters",
+                "P": "AE#hasUnitOfMeasure",
+                "S": "collection_0"
+            }
+        },
+        {
+            "A": {
+                "O": "collection_4",
+                "P": "AE#hasPath",
+                "S": "Travelling_UUID"
+            }
+        },
+        {
+            "A": {
+                "D": "32.76191343",
+                "P": "AE#hasLongitude",
+                "S": "collection_1"
+            }
+        },
+        {
+            "A": {
+                "O": "collection_1",
+                "P": "AE#hasEndRegion",
+                "S": "collection_4"
+            }
+        },
+        {
+            "A": {
+                "D": "-117.2268967",
+                "P": "AE#hasLatitude",
+                "S": "collection_1"
+            }
+        },
+        {
+            "A": {
+                "O": "collection_2",
+                "P": "AE#hasExpectedTravelTime",
+                "S": "collection_4"
+            }
+        },
+        {
+            "A": {
+                "D": "5.594792331",
+                "P": "AE#numericValue",
+                "S": "collection_2"
+            }
+        },
+        {
+            "A": {
+                "D": "minutes",
+                "P": "AE#hasUnitOfMeasure",
+                "S": "collection_2"
+            }
+        },
+        {
+            "A": {
+                "O": "collection_3",
+                "P": "AE#hasStartRegion",
+                "S": "collection_4"
+            }
+        },
+        {
+            "A": {
+                "D": "-117.1892546",
+                "P": "AE#hasLatitude",
+                "S": "collection_3"
+            }
+        },
+        {
+            "A": {
+                "D": "32.7464414",
+                "P": "AE#hasLongitude",
+                "S": "collection_3"
+            }
+        }
+    ],
+    "collection": "collection",
+    "collections": [],
+    "dataType": "",
+    "datamap": "",
+    "elements": [],
+    "error": false,
+    "errorMessage": "",
+    "message": "",
+    "numberOfAssertions": 0,
+    "outputs": []
+}
