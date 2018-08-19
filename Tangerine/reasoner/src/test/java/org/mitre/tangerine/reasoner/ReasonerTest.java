@@ -16,6 +16,10 @@ package org.mitre.tangerine.reasoner;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -55,6 +59,20 @@ public class ReasonerTest {
                 System.out.println(tpl.getCol()[j]);
                 System.out.println(RS.getVariables().get(j));
             }
+        }
+    }
+    
+    @Test
+    public void parseFlora() {
+    	InputStreamReader test = new InputStreamReader(this.getClass().getClassLoader().getResourceAsStream("AE.flr"));
+        
+        FLogicDriver driver = new FLogicDriver();
+        driver.setOenv(null);
+
+        try {
+            driver.parse(test);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

@@ -80,7 +80,7 @@ NumLiteral = [0-9\.]+
   {NumLiteral} {return symbol(sym.NUMBER, yytext());}
 	[']          {string.setLength(0); yybegin(STRING);}
 
-	[a-zA-Z][a-zA-Z0-9_]*                  {return symbol(sym.ALPHA, yytext());}
+	[a-zA-Z][a-zA-Z0-9_\-'(]*[a-zA-Z0-9)]                  {return symbol(sym.ALPHA, yytext());}
 
 	[a-zA-Z]+"#"                           {return symbol(sym.NAMESPACE, yytext());}
 
@@ -88,8 +88,6 @@ NumLiteral = [0-9\.]+
 
   "$"[a-zA-Z0-9_]+                       {return symbol(sym.ATTRIBUTE, yytext());}
 
-	[ \t]*  {;}
-	[\n]    {;}
 }
 
 <STRING> {
@@ -104,4 +102,4 @@ NumLiteral = [0-9\.]+
 }
 
 /* error fallback */
-.|\n                 {throw new Error("Illegal character <"+ yytext() +">");}
+[^]                {throw new Error("Illegal character <"+ yytext() +">");}
