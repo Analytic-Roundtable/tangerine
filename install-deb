@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#add mongodb repository
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+#sudo apt-get update
+
+#sudo apt-get install -y git openjdk-8-jdk maven tomcat8 mongodb-org --allow-unauthenticated
+
+cd ~
+git clone https://github.com/Analytic-Roundtable/tangerine.git
+cd tangerine/Tangerine
+mvn compile install
+
+sudo cp ~/tangerine/Tangerine/server/target/tangerine.war  /var/lib/tomcat8/webapps/
+cd ~/tangerine/Tangerine/server/
+
+
+sudo mkdir -p /usr/share/tomcat8/outbound; for f in `find ~/tangerine/Tangerine/adapters/outbound | grep jar`; do sudo cp $f /usr/share/tomcat8/outbound ; done
+sudo mkdir -p /usr/share/tomcat8/inbound; for f in `find ~/tangerine/Tangerine/adapters/analytics | grep jar`; do sudo cp $f /usr/share/tomcat8/inbound ; done
+
+
+sudo chown tomcat8:tomcat8 /usr/share/tomcat8/inbound/
+sudo chown tomcat8:tomcat8 /usr/share/tomcat8/outbound/
+
+sudo systemctl start mongod
+sudo systemctl enable mongod
+sudo systemctl start tomcat8
+sudo systemctl enable tomcat8
+
+sleep 20
+
+cd ~/tangerine/Tangerine/client
+java -cp lib/*:target/client.jar org.mitre.tangerine.client.TangerineTester analytics
