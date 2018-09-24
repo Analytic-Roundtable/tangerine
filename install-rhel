@@ -1,0 +1,56 @@
+sudo yum install -y git java-1.8.0-openjdk-devel maven
+cd ~
+git clone https://github.com/Analytic-Roundtable/tangerine.git
+
+cat >> ~/.bash_profile > EOL
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.111-1.b15.el7_2.x86_64/jre
+export PATH=$JAVA_HOME/bin:$PATH
+EOL
+
+sudo touch /etc/systemd/system/tomcat.service
+sudo cat > /etc/systemd/system/tomcat.service > EOL
+[Unit]
+Description=Apache Tomcat 8 Servlet Container
+After=syslog.target network.target
+	 
+[Service]
+User=tomcat
+Group=tomcat
+Type=forking
+Environment=CATALINA_PID=/opt/tomcat/tomcat.pid
+Environment=CATALINA_HOME=/opt/tomcat
+Environment=CATALINA_BASE=/opt/tomcat
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+Restart=on-failure
+	 
+[Install]
+WantedBy=multi-user.target
+EOL
+
+systemctl daemon-reload
+systemctl start tomcat
+systemctl enable tomcat
+
+mvn compile install
+
+sudo cp server/target/tangerine.war  /opt/tomcat/webapps/
+sudo mkdir /opt/tomcat/outbound; for f in `find adapters/outbound | grep jar`; do sudo cp $f /opt/tomcat/outbound ; done
+sudo mkdir /opt/tomcat/inbound; for f in `find adapters/analytics | grep jar`; do sudo cp $f /opt/tomcat/inbound ; done
+
+
+sudo touch /etc/yum.repos.d/mongodb-org.repo
+sudo cat > /etc/yum.repos.d/mongodb-org.repo > EOL
+[mongodb-org-3.4]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/3.4/x86_64/
+gpgcheck=0
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-3.4.asc
+EOL
+
+sudo systemctl start mongod
+sudo systemctl enable mongod
+
+
+
