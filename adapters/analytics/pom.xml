@@ -14,6 +14,7 @@
 		<module>esri</module>
 		<module>hana</module>
 		<module>general</module>
+		<module>ingest</module>
 	</modules>
 
 </project>
