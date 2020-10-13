@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
     <properties>
         <slf4j.v>1.7.25</slf4j.v>
-        <junit.v>4.12</junit.v>
+        <junit.v>4.13.1</junit.v>
     </properties>
     <modules>
         <!-- independent, used downstream -->
